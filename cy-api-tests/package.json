@@ -1,0 +1,22 @@
+{
+  "name": "serverest",
+  "version": "1.2.0",
+  "description": "Projeto que contém a automação dos cenários de testes da aplicação serverest.dev",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run": "cypress run --reporter mochawesome; npx mochawesome-merge cypress/reports/mochawesome-report/*.json > cypress/reports/mochawesome.json && rm -rf ./cypress/reports/mochawesome-report/ && npx marge cypress/reports/mochawesome.json -o cypress/reports",
+    "cypress:execution": "cypress open",
+    "report:cleanup": "rm -rf ./cypress/reports/mochawesome-report/ && rm -rf ./cypress/reports/assets/ && rm -rf cypress/reports/mochawesome.html &&  rm -fr cypress/screenshots && rm -f ./cypress/reports/mochawesome.json && rm -fr mochawesome-report"
+  },
+  "author": "Andriano Toazza",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.13.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
