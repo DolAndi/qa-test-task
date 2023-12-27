@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-27T14:16:04.850Z",
+    "end": "2023-12-27T14:16:06.090Z",
+    "duration": 1240,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "621796f2-ccc1-4e23-bfc0-b18070823387",
+      "title": "",
+      "fullFile": "cypress\\e2e\\apiTesting\\apiTest.cy.js",
+      "file": "cypress\\e2e\\apiTesting\\apiTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cd2dc358-9131-4980-953f-14cfc6e7d129",
+          "title": "API Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should find APIs with Authentication & Authorization category",
+              "fullTitle": "API Test should find APIs with Authentication & Authorization category",
+              "timedOut": null,
+              "duration": 1215,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _apiRequests.fetchAuthApis)().then(authApis => {\n  console.log('Found APIs:', authApis);\n  expect(authApis.length).to.be.greaterThan(0);\n});",
+              "err": {},
+              "uuid": "d25657a2-0b1a-4c81-9457-83c168d5cf76",
+              "parentUUID": "cd2dc358-9131-4980-953f-14cfc6e7d129",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d25657a2-0b1a-4c81-9457-83c168d5cf76"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1215,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
