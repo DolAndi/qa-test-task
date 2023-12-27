@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-27T14:39:15.210Z",
+    "end": "2023-12-27T14:39:16.468Z",
+    "duration": 1258,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c87ad264-6102-46f0-8b9d-d666b47649a1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\apiTesting\\apiTest.cy.js",
+      "file": "cypress\\e2e\\apiTesting\\apiTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "73dfa051-bf80-48c8-abe1-4373c10d2ccd",
+          "title": "API Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should find APIs with Authentication & Authorization category",
+              "fullTitle": "API Test should find APIs with Authentication & Authorization category",
+              "timedOut": null,
+              "duration": 1217,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _apiRequests.fetchAuthApis)().then(authApis => {\n  cy.log('Found APIs:', authApis);\n  // Verifique se a quantidade de objetos corresponde ao esperado\n  expect(authApis.length).to.be.greaterThan(0);\n  // Verifique se a propriedade \"Category\" é igual a \"Authentication & Authorization\" para cada objeto\n  authApis.forEach(api => {\n    expect(api.Category).to.equal('Authentication & Authorization');\n  });\n});",
+              "err": {},
+              "uuid": "5e40805d-0ee7-448a-b79e-db384487d5ce",
+              "parentUUID": "73dfa051-bf80-48c8-abe1-4373c10d2ccd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5e40805d-0ee7-448a-b79e-db384487d5ce"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1217,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
