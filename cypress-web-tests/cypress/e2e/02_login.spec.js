@@ -1,5 +1,4 @@
 import cy from '../support/pages/general'
-import login from '../support/pages/login'
 import { faker } from '@faker-js/faker'
 const fakerbr = require('faker-br');
 

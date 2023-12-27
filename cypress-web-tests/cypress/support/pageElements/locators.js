@@ -5,6 +5,10 @@ const locators = {
         loginBt: '#login-button',
         loginValidation: '#page_wrapper',
         errorValidation: '.error-message-container'
+    },
+    FILTERS: {
+        sortContainer: '.product_sort_container',
+        activeSortContainer: '.active_option'
     }
 }
 
