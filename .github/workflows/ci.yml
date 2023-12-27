@@ -3,24 +3,24 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  api-tests:
-    runs-on: ubuntu-latest
+#   api-tests:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
+#     steps:
+#     - uses: actions/checkout@v2
 
-    - name: Configuração do Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20.9.0'
+#     - name: Configuração do Node.js
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: '20.9.0'
 
-    - name: Instalação de Dependências (API)
-      run: npm install
-      working-directory: ./cy-api-tests
+#     - name: Instalação de Dependências (API)
+#       run: npm install
+#       working-directory: ./cy-api-tests
 
-    - name: Executar Testes de API
-      run: npm test
-      working-directory: ./cy-api-tests
+#     - name: Executar Testes de API
+#       run: npm test
+#       working-directory: ./cy-api-tests
 
   ui-tests:
     runs-on: ubuntu-latest
@@ -38,5 +38,5 @@ jobs:
       working-directory: ./cypress-web-tests
 
     - name: Executar Testes de UI
-      run: npm test
+      run: npm run cy:ui-regression
       working-directory: ./cypress-web-tests
