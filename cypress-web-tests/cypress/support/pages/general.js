@@ -1,4 +1,3 @@
-require('@cypress/xpath');
 import locators from '../pageElements/locators';
 
 class General {
@@ -54,8 +53,11 @@ class General {
     cy.get(locators.LOGIN.loginBt).click().as('click login button');
   }
   errorValidation(errorMessage) {
-    cy.get(locators.LOGIN.errorValidation).should('exist', 'be.visible').as('error login validation');
-    cy.xpath(locators.COMMON.seeText(errorMessage)).should('exist', 'be.visible').as('error login validation');
+    cy.get(locators.LOGIN.errorValidation)
+      .should('exist')
+      .and('be.visible')
+      .and('contain', errorMessage)
+      .as('error login validation')
   }
 }
 
