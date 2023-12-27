@@ -15,21 +15,37 @@ Before running the tests, make sure you have the following tools installed on yo
 - Node.js (version 12 or higher)
 - NPM or Yarn (I recommend NPM)
 
-## How to install
+## Installation
 
-Clone this repository to your computer using the command:
+Clone the repository:
 ```bash
 git clone https://github.com/DolAndi/qa-test-task.git
 ```
 
-Install project dependencies and Cypress using NPM:
+### For UI Tests
+Navigate to the UI tests directory and install dependencies:
+```bash
+cd cypress-web-tests
+```
 ```bash
 npm install
 ```
-
 ```bash
 npm install cypress --save-dev
 ```
+
+### For API Tests
+Navigate to the API tests directory and install dependencies:
+```bash
+cd cy-api-tests
+```
+```bash
+npm install
+```
+```bash
+npm install cypress --save-dev
+```
+
 ## UI Tests - How to run 
 
 ### Headless mode:
